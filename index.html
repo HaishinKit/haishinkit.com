@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HaishinKit — Live Streaming SDKs for Swift, Android &amp; Flutter</title>
-  <meta name="description" content="Build live video apps with HaishinKit. Compose text, images and video with ScreenObject, then stream with open-source SDKs for Swift, Android and Flutter." />
+  <title>HaishinKit — アプリにライブ配信を</title>
+  <meta name="description" content="HaishinKitは、Swift、Android、Flutter向けのオープンソースライブ配信ライブラリです。カメラとマイクの入力から、映像合成、配信までをアプリに組み込めます。" />
   <meta name="theme-color" content="#101a19" />
   <link rel="canonical" href="https://haishinkit.com/" />
+  <link rel="alternate" hreflang="ja" href="https://haishinkit.com/" />
+  <link rel="alternate" hreflang="en" href="https://haishinkit.com/en/" />
+  <meta property="og:locale" content="ja_JP" />
   <link rel="icon" href="/haishinkit-icon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/haishinkit-icon.png" />
   <link rel="stylesheet" href="/styles.css" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="HaishinKit" />
-  <meta property="og:title" content="HaishinKit — Build something live." />
-  <meta property="og:description" content="Open-source live streaming SDKs for Swift, Kotlin and Flutter. From camera and microphone to your next streaming app." />
+  <meta property="og:title" content="HaishinKit — アプリにライブ配信を" />
+  <meta property="og:description" content="カメラとマイクの入力から映像合成、ライブ配信まで。Swift、Android、Flutter向けのオープンソースSDKです。" />
   <meta property="og:url" content="https://haishinkit.com/" />
   <meta name="twitter:card" content="summary" />
   <script type="application/ld+json">
@@ -21,77 +24,91 @@
     "@context": "https://schema.org",
     "@graph": [
       {"@type":"Organization","@id":"https://haishinkit.com/#organization","name":"HaishinKit","url":"https://haishinkit.com/","sameAs":["https://github.com/HaishinKit"]},
-      {"@type":"WebSite","@id":"https://haishinkit.com/#website","name":"HaishinKit","url":"https://haishinkit.com/","inLanguage":"en","publisher":{"@id":"https://haishinkit.com/#organization"}},
-      {"@type":"WebPage","@id":"https://haishinkit.com/#webpage","url":"https://haishinkit.com/","name":"HaishinKit — Live Streaming SDKs for Swift, Android & Flutter","description":"Open-source live audio and video streaming libraries for Swift, Kotlin on Android, and Dart with Flutter.","isPartOf":{"@id":"https://haishinkit.com/#website"},"about":[{"@id":"https://haishinkit.com/#swift"},{"@id":"https://haishinkit.com/#kotlin"},{"@id":"https://haishinkit.com/#flutter"}]},
-      {"@type":"SoftwareSourceCode","@id":"https://haishinkit.com/#swift","name":"HaishinKit.swift","description":"Camera and microphone streaming library for iOS, macOS, tvOS and visionOS. Compose text, images and video with ScreenObject. Supports RTMP and SRT; WHIP/WHEP support is alpha.","codeRepository":"https://github.com/HaishinKit/HaishinKit.swift","programmingLanguage":"Swift","runtimePlatform":["iOS","macOS","tvOS","visionOS"],"license":"https://spdx.org/licenses/BSD-3-Clause.html","url":"https://docs.haishinkit.com/swift/latest/documentation/"},
-      {"@type":"SoftwareSourceCode","@id":"https://haishinkit.com/#kotlin","name":"HaishinKit.kt","description":"Camera and microphone streaming library via RTMP/RTMPS, experimental SRT and experimental WHIP/WHEP for Android. Includes media mixing and a common StreamSession API for publishing and playback.","codeRepository":"https://github.com/HaishinKit/HaishinKit.kt","programmingLanguage":"Kotlin","runtimePlatform":"Android","license":"https://spdx.org/licenses/BSD-3-Clause.html","url":"https://docs.haishinkit.com/kt/latest/"},
-      {"@type":"SoftwareSourceCode","@id":"https://haishinkit.com/#flutter","name":"HaishinKit.dart","description":"Flutter plugin for capture, mixing, RTMP, SRT, WHIP publishing and WHEP playback on Android, iOS and macOS. The plugin is under development.","codeRepository":"https://github.com/HaishinKit/HaishinKit.dart","programmingLanguage":"Dart","runtimePlatform":"Flutter","license":"https://spdx.org/licenses/BSD-3-Clause.html","url":"https://docs.haishinkit.com/dart/latest/"}
+      {"@type":"WebSite","@id":"https://haishinkit.com/#website","name":"HaishinKit","url":"https://haishinkit.com/","inLanguage":"ja","publisher":{"@id":"https://haishinkit.com/#organization"}},
+      {"@type":"WebPage","@id":"https://haishinkit.com/#webpage","url":"https://haishinkit.com/","name":"HaishinKit — アプリにライブ配信を","description":"Swift、Android、Flutter向けのオープンソースライブ配信ライブラリです。","isPartOf":{"@id":"https://haishinkit.com/#website"},"about":[{"@id":"https://haishinkit.com/#swift"},{"@id":"https://haishinkit.com/#kotlin"},{"@id":"https://haishinkit.com/#flutter"}]},
+      {"@type":"SoftwareSourceCode","@id":"https://haishinkit.com/#swift","name":"HaishinKit.swift","description":"Appleプラットフォーム向けのライブ配信ライブラリ。ScreenObjectによる映像合成とRTMP、SRTに対応し、WHIP/WHEPはアルファ版です。","codeRepository":"https://github.com/HaishinKit/HaishinKit.swift","programmingLanguage":"Swift","runtimePlatform":["iOS","macOS","tvOS","visionOS"],"license":"https://spdx.org/licenses/BSD-3-Clause.html","url":"https://docs.haishinkit.com/swift/latest/documentation/"},
+      {"@type":"SoftwareSourceCode","@id":"https://haishinkit.com/#kotlin","name":"HaishinKit.kt","description":"Android向けのライブ配信ライブラリ。RTMP/RTMPSに対応し、SRTとWHIP/WHEPは実験的サポートです。","codeRepository":"https://github.com/HaishinKit/HaishinKit.kt","programmingLanguage":"Kotlin","runtimePlatform":"Android","license":"https://spdx.org/licenses/BSD-3-Clause.html","url":"https://docs.haishinkit.com/kt/latest/"},
+      {"@type":"SoftwareSourceCode","@id":"https://haishinkit.com/#flutter","name":"HaishinKit.dart","description":"Android、iOS、macOSで映像と音声を扱う開発中のFlutterプラグインです。","codeRepository":"https://github.com/HaishinKit/HaishinKit.dart","programmingLanguage":"Dart","runtimePlatform":"Flutter","license":"https://spdx.org/licenses/BSD-3-Clause.html","url":"https://docs.haishinkit.com/dart/latest/"}
     ]
   }
   </script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">本文へ移動</a>
   <header class="header wrap">
-    <a class="brand" href="/" aria-label="HaishinKit home"><img class="brand-logo" src="/haishinkit-icon.png" alt="" width="35" height="35" />HaishinKit<span class="brand-dot">.</span></a>
-    <nav aria-label="Main navigation"><a href="#sdks">SDKs</a><a href="#capabilities">Capabilities</a><a href="https://docs.haishinkit.com/">Docs <span aria-hidden="true">↗</span></a></nav>
+    <a class="brand" href="/" aria-label="HaishinKit トップ"><img class="brand-logo" src="/haishinkit-icon.png" alt="" width="35" height="35" />HaishinKit<span class="brand-dot">.</span></a>
+    <nav aria-label="メインナビゲーション"><a href="#sdks">SDKを選ぶ</a><a href="#capabilities">できること</a><a href="https://docs.haishinkit.com/">ドキュメント <span aria-hidden="true">↗</span></a><a href="/en/" hreflang="en" lang="en">English</a></nav>
     <a class="header-github" href="https://github.com/HaishinKit">GitHub <span aria-hidden="true">↗</span></a>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> OPEN SOURCE. ON AIR.</p>
-        <h1 id="hero-title">Build something<br /><em>live.</em></h1>
-        <p class="lead">Live streaming, inside your app.</p>
-        <p class="hero-description">Compose your broadcast with ScreenObject: bring text, images and video together in your stream. HaishinKit brings capture, composition and streaming APIs to Swift, Kotlin and Flutter.</p>
-        <div class="actions"><a class="button primary" href="#sdks">Choose your SDK <span aria-hidden="true">↗</span></a><a class="text-link" href="https://docs.haishinkit.com/">Explore the docs <span aria-hidden="true">→</span></a></div>
-        <p class="hero-note">Swift · Kotlin · Dart <span aria-hidden="true">/</span> BSD 3-Clause licensed</p>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> オープンソースのライブ配信SDK</p>
+        <h1 id="hero-title">アプリに、<br /><em>ライブ配信を。</em></h1>
+        <p class="lead">カメラとマイクから、ライブ配信へ。</p>
+        <p class="hero-description">モバイル端末やPCから映像や音声を取り込み、文字や画像を重ねて、アプリから配信するためのSDKです。HaishinKitは、Appleプラットフォーム、Android、Flutter向けに開発しています。</p>
+        <div class="actions"><a class="button primary" href="#sdks">使い始める <span aria-hidden="true">↗</span></a><a class="text-link" href="https://docs.haishinkit.com/">ドキュメントを見る <span aria-hidden="true">→</span></a></div>
+        <p class="hero-note">Swift · Kotlin · Dart <span aria-hidden="true">/</span> BSD 3-Clause ライセンス</p>
       </div>
-      <div class="studio" role="img" aria-label="Illustrated streaming pipeline: camera and microphone inputs, HaishinKit media mixing, and stream output. This is a conceptual illustration, not a live stream.">
-        <div class="studio-top"><span><i class="status-dot" aria-hidden="true"></i> STREAMING PIPELINE</span><span class="studio-counter">01 / HK</span></div>
-        <div class="viewfinder"><div class="sun"></div><div class="landscape back"></div><div class="landscape front"></div><div class="viewfinder-grid"></div><span class="frame-label">CAMERA INPUT</span><span class="frame-corner">↗</span></div>
-        <div class="audio-line"><span>AUDIO IN</span><div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>MIC</span></div>
-        <div class="pipeline"><span>CAPTURE</span><b>→</b><span class="pipeline-active">MIX</span><b>→</b><span>STREAM</span></div>
-        <div class="studio-bottom"><span>YOUR APP. YOUR BROADCAST.</span><span aria-hidden="true">● ● ●</span></div>
-      </div>
-    </section>
-    <div class="platform-strip"><div class="wrap"><span>MADE FOR YOUR STACK</span><p>iOS <span>/</span> macOS <span>/</span> tvOS <span>/</span> visionOS <span>/</span> Android <span>/</span> Flutter</p></div></div>
-    <section id="sdks" class="section wrap" aria-labelledby="sdks-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / THE LIBRARIES</p><h2 id="sdks-title">Your platform.<br />Your starting point.</h2></div><p>Native APIs where you need them.<br />Open source all the way down.</p></div>
-      <div class="sdk-grid">
-        <article id="swift" class="sdk"><div class="sdk-meta"><span>01</span><span>APPLE PLATFORMS</span></div><div class="language-icon swift-icon" aria-hidden="true">S<span>↗</span></div><h3>HaishinKit.swift</h3><p class="sdk-platform">iOS · macOS · tvOS · visionOS</p><p>Build with Swift for camera and microphone capture, ScreenObject composition, and live publishing or playback.</p><div class="tags"><span>RTMP</span><span>SRT</span><span>WHIP / WHEP · alpha</span></div><a class="sdk-doc" href="https://docs.haishinkit.com/swift/latest/documentation/">Swift API reference <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/HaishinKit/HaishinKit.swift">Source, setup &amp; examples <span aria-hidden="true">→</span></a></article>
-        <article id="kotlin" class="sdk"><div class="sdk-meta"><span>02</span><span>ANDROID</span></div><div class="language-icon kotlin-icon" aria-hidden="true">K</div><h3>HaishinKit.kt</h3><p class="sdk-platform">Kotlin · Android</p><p>Bring RTMP/RTMPS, experimental SRT and experimental WHIP/WHEP streaming to Android with camera and microphone APIs, video mixing, and multiple stream outputs. Use a common StreamSession API for publishing and playback.</p><div class="tags"><span>RTMP / RTMPS</span><span>SRT · experimental</span><span>WHIP / WHEP · experimental</span><span>Jetpack Compose module</span></div><p>Optional Vulkan output is available on Android API 28+ with OpenGL fallback.</p><a class="sdk-doc" href="https://docs.haishinkit.com/kt/latest/">Kotlin API reference <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/HaishinKit/HaishinKit.kt">Source, setup &amp; examples <span aria-hidden="true">→</span></a></article>
-        <article id="flutter" class="sdk"><div class="sdk-meta"><span>03</span><span>FLUTTER</span></div><div class="language-icon dart-icon" aria-hidden="true">D<span>↗</span></div><h3>HaishinKit.dart</h3><p class="sdk-platform">Android · iOS · macOS</p><p>Capture and mix media in Flutter, publish over RTMP, SRT or WHIP, and play back with RTMP, SRT or WHEP. The plugin is under development; review its current limitations before adopting.</p><div class="tags"><span>RTMP</span><span>SRT</span><span>WHIP / WHEP</span><span>Under development</span></div><a class="sdk-doc" href="https://docs.haishinkit.com/dart/latest/">Dart API reference <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/HaishinKit/HaishinKit.dart">Source, setup &amp; examples <span aria-hidden="true">→</span></a></article>
-      </div>
-    </section>
-    <section id="capabilities" class="capabilities" aria-labelledby="capabilities-title"><div class="wrap capability-layout"><div><p class="eyebrow">02 / FROM INPUT TO OUTPUT</p><h2 id="capabilities-title">More than<br />a camera feed.</h2><p class="capability-intro">ScreenObject is at the heart of HaishinKit’s visual composition. Draw and arrange multiple objects in your video to create a broadcast that feels like your app. Available object types differ by SDK and platform.</p><a class="text-link" href="https://docs.haishinkit.com/">Explore the APIs <span aria-hidden="true">↗</span></a></div><div class="feature-list"><article><span>01</span><div><h3>Capture the moment</h3><p>Work with camera and microphone inputs. On Apple platforms, explore screen capture with ReplayKit and ScreenCaptureKit.</p></div></article><article><span>02</span><div><h3>Compose with ScreenObject</h3><p>In HaishinKit.swift, combine TextScreenObject, ImageScreenObject and VideoScreenObject for text, images and camera video. Add video assets with AssetScreenObject or incoming stream video with StreamScreenObject, subject to platform support.</p><p>Arrange objects with size, alignment and layout margins, and group them with ScreenObjectContainer. Build watermarks, captions, picture-in-picture views and custom broadcast layouts.</p><p><a href="https://docs.haishinkit.com/swift/latest/documentation/haishinkit/screenobject/">Explore the ScreenObject API ↗</a></p></div></article><article><span>03</span><div><h3>Reach your streaming service</h3><p>Publish or play back over RTMP/RTMPS on Swift and Android. SRT is available in Swift and as an experimental Android module, with MPEG-TS transport and encryption support. Publish with WHIP or play back with WHEP through the RTC modules: alpha on Swift and experimental on Android. Flutter exposes RTMP, SRT, WHIP and WHEP on Android, iOS and macOS. Multi-streaming lets you send to separate services.</p><p><a href="https://github.com/HaishinKit/HaishinKit.kt/blob/master/srt/README.md">Android SRT setup and examples ↗</a></p></div></article></div></div></section>
-    <section class="section wrap start" aria-labelledby="start-title"><div><p class="eyebrow">03 / FIRST FRAME</p><h2 id="start-title">From repo<br />to your first stream.</h2><p>Start with the example app for your platform.<br />Connect your own streaming endpoint, then build from there.</p><a class="button primary" href="https://github.com/HaishinKit/HaishinKit.swift/tree/main/Examples">Explore Swift examples <span aria-hidden="true">↗</span></a></div><div class="terminal"><div class="terminal-top"><span aria-hidden="true">● ● ●</span><span>SWIFT / QUICK START</span></div><pre><code><span class="comment"># Get the library and example apps</span>
-git clone https://github.com/HaishinKit/HaishinKit.swift.git
-cd HaishinKit.swift
+      <div class="studio" role="img" aria-label="配信の概念図。カメラとマイクの入力をHaishinKitで合成し、配信します。">
+        <div class="studio-top"><span><i class="status-dot" aria-hidden="true"></i> 配信の流れ</span></div>
+        <div class="viewfinder"><div class="sun"></div><div class="landscape back"></div><div class="landscape front"></div><div class="viewfinder-grid"></div><span class="frame-label">カメラ映像</span><span class="frame-corner">↗</span></div>
+        <div class="audio-line"><span>音声入力</span><div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>マイク</span></div>
+        <div class="pipeline"><span>取り込み</span><b>→</b><span class="pipeline-active">合成</span><b>→</b><span>配信</span></div>
 
-<span class="comment"># Open the examples in Xcode</span>
-open Examples/Examples.xcodeproj</code></pre><p>Using another platform? <a href="https://github.com/HaishinKit/HaishinKit.kt">Android examples ↗</a> <a href="https://github.com/HaishinKit/HaishinKit.dart">Flutter examples ↗</a></p></div></section>
-    <section class="faq section wrap" aria-labelledby="faq-title"><div><p class="eyebrow">04 / GOOD TO KNOW</p><h2 id="faq-title">A few answers<br />before you build.</h2></div><div class="answers"><article><h3>What is HaishinKit?</h3><p>HaishinKit is a family of open-source audio and video streaming libraries. HaishinKit.swift targets Apple platforms, HaishinKit.kt targets Android, and HaishinKit.dart provides a Flutter interface.</p></article><article><h3>What can I draw with ScreenObject?</h3><p>ScreenObject lets you compose multiple visual objects into the outgoing video, rather than only displaying overlays in your app’s interface. In the Swift SDK, supported objects include text, images, camera video, video assets and incoming stream video. Use containers to group objects and control their layout. Object availability varies by platform; AssetScreenObject is not available on visionOS.</p></article><article><h3>Which streaming protocols are supported?</h3><p>RTMP is available across the projects, with RTMPS support in the Swift and Android SDKs. HaishinKit.swift supports SRT and includes alpha WHIP/WHEP support. HaishinKit.kt offers experimental SRT publishing and playback with H.264/H.265 and AAC over MPEG-TS, plus experimental WHIP/WHEP with H.264 and Opus. HaishinKit.dart exposes RTMP, SRT, WHIP publishing and WHEP playback on Android, iOS and macOS. Protocol availability and maturity differ by SDK and version.</p></article><article><h3>Can I use HaishinKit in a commercial app?</h3><p>The SDKs use the BSD 3-Clause license, which permits commercial use subject to its terms. Review the license and third-party dependency licenses in your chosen repository.</p></article><article><h3>Where are the docs for an older version?</h3><p>Visit <a href="https://docs.haishinkit.com/#versions">documentation versions</a>. Replace <code>latest</code> with a published version in <code>/swift/$version/documentation/</code>, <code>/kt/$version/</code> or <code>/dart/$version/</code>.</p></article></div></section>
+      </div>
+    </section>
+    <div class="platform-strip"><div class="wrap"><span>対応プラットフォーム</span><p>iOS <span>/</span> macOS <span>/</span> tvOS <span>/</span> visionOS <span>/</span> Android <span>/</span> Flutter</p></div></div>
+    <section id="sdks" class="section wrap" aria-labelledby="sdks-title">
+      <div class="section-heading"><div><h2 id="sdks-title">プラットフォームから選ぶ</h2></div></div>
+      <div class="sdk-grid">
+        <article id="swift" class="sdk"><div class="sdk-meta"><span>Appleプラットフォーム</span></div><div class="language-icon swift-icon" aria-hidden="true">S</div><h3>HaishinKit.swift</h3><p class="sdk-platform">iOS · macOS · tvOS · visionOS</p><div class="sdk-release"><span>公開バージョン</span><a href="https://github.com/HaishinKit/HaishinKit.swift/releases/latest">GitHub Releases <img src="https://img.shields.io/github/v/release/HaishinKit/HaishinKit.swift" alt="公開バージョンのバッジ" height="20" /></a></div><div class="tags"><span>RTMP</span><span>SRT</span><span>WHIP / WHEP · アルファ版</span></div><a class="sdk-doc" href="https://docs.haishinkit.com/swift/latest/documentation/">Swift APIリファレンス <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/HaishinKit/HaishinKit.swift">導入手順・サンプル・ソース <span aria-hidden="true">→</span></a></article>
+        <article id="kotlin" class="sdk"><div class="sdk-meta"><span>Android</span></div><div class="language-icon kotlin-icon" aria-hidden="true">K</div><h3>HaishinKit.kt</h3><p class="sdk-platform">Kotlin · Android</p><div class="sdk-release"><span>公開バージョン</span><a href="https://jitpack.io/#HaishinKit/HaishinKit~kt">JitPack <img src="https://jitpack.io/v/HaishinKit/HaishinKit~kt.svg" alt="公開バージョンのバッジ" height="20" /></a></div><div class="tags"><span>RTMP / RTMPS</span><span>SRT · 実験的</span><span>WHIP / WHEP · 実験的</span><span>Jetpack Composeモジュール</span></div><a class="sdk-doc" href="https://docs.haishinkit.com/kt/latest/">Kotlin APIリファレンス <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/HaishinKit/HaishinKit.kt">導入手順・サンプル・ソース <span aria-hidden="true">→</span></a></article>
+        <article id="flutter" class="sdk"><div class="sdk-meta"><span>Flutter</span></div><div class="language-icon dart-icon" aria-hidden="true">D</div><h3>HaishinKit.dart</h3><p class="sdk-platform">Android · iOS · macOS</p><div class="sdk-release"><span>公開バージョン</span><a href="https://pub.dev/packages/haishin_kit">pub.dev <img src="https://img.shields.io/pub/v/haishin_kit.svg" alt="公開バージョンのバッジ" height="20" /></a></div><div class="tags"><span>RTMP / RTMPS</span><span>SRT</span><span>WHIP / WHEP</span><span>開発中</span></div><a class="sdk-doc" href="https://docs.haishinkit.com/dart/latest/">Dart APIリファレンス <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/HaishinKit/HaishinKit.dart">導入手順・サンプル・ソース <span aria-hidden="true">→</span></a></article>
+      </div>
+    </section>
+    <section id="capabilities" class="capabilities" aria-labelledby="capabilities-title"><div class="wrap capability-layout"><div><h2 id="capabilities-title">取り込みから配信まで</h2><p class="capability-intro">カメラ映像に字幕やロゴを重ね、アプリに合った配信画面を組み立てられます。利用できる機能はSDKやプラットフォームによって異なります。</p><a class="text-link" href="https://docs.haishinkit.com/">APIリファレンスを見る <span aria-hidden="true">↗</span></a></div><div class="feature-list"><article><span>01</span><div><h3>映像と音声を取り込む</h3><p>カメラとマイクの入力を扱えます。AppleプラットフォームではReplayKitやScreenCaptureKitを使った画面キャプチャにも対応します。</p></div></article><article><span>02</span><div><h3>映像を合成する</h3><p>テキスト・画像・ビデオなどの素材を選び、ひとつの配信画面に合成できます。素材の位置や大きさを調整して、字幕やロゴ、小窓映像を配置できます。</p></div></article><article><span>03</span><div><h3>配信先に接続する</h3><p>配信先や用途に応じてRTMP、SRT、WHIPなどを選べます。利用できる方式や対応状況は各SDKのドキュメントで確認できます。複数の配信先へ同時に送信する機能もあります。</p><p><a href="https://github.com/HaishinKit/HaishinKit.kt/blob/master/srt/README.md">AndroidでのSRT導入手順とサンプル ↗</a></p></div></article></div></div></section>
+    <section class="section wrap start" aria-labelledby="start-title">
+  <div>
+    <h2 id="start-title">サンプルで配信を試す</h2>
+    <p>macOSのサンプルアプリをダウンロードし、配信先のURLを設定して試せます。Appleシリコンを搭載し、macOS 15.5以降を実行しているMacが対象です。</p>
+    <div class="actions">
+      <a class="button primary" href="https://github.com/HaishinKit/HaishinKit.swift/releases/download/2.3.1/HaishinKit-macOS-2.3.1-arm64-unsigned.zip">macOSサンプルをダウンロード（2.3.1） <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href="https://github.com/HaishinKit/HaishinKit.swift/releases/tag/2.3.1">リリース詳細 <span aria-hidden="true">↗</span></a>
+    </div>
+    <p class="source-link">この配布版は署名されていないため、macOSが起動を制限する場合があります。</p>
+    <p class="source-link"><a href="https://github.com/HaishinKit/HaishinKit.swift/tree/main/Examples">Swiftのソース</a> · <a href="https://github.com/HaishinKit/HaishinKit.kt">Androidのサンプル</a> · <a href="https://github.com/HaishinKit/HaishinKit.dart">Flutterのサンプル</a></p>
+  </div>
+  <figure class="project-screenshot">
+    <img src="/images/macos-sample-publish.png" alt="macOSのHaishinKitサンプルでカラーバーのテスト信号をSRT配信している画面" width="1280" height="1000" loading="lazy" decoding="async" />
+    <figcaption>macOSサンプルの配信画面。テスト信号をSRTで配信している例です。</figcaption>
+  </figure>
+</section>
+    <section class="faq section wrap" aria-labelledby="faq-title"><div><h2 id="faq-title">よくある質問</h2></div><div class="answers"><article><h3>HaishinKitとは？</h3><p>映像や音声のライブ配信をアプリに組み込むためのオープンソースライブラリです。Appleプラットフォーム向けの<a href="https://github.com/HaishinKit/HaishinKit.swift">HaishinKit.swift</a>、Android向けの<a href="https://github.com/HaishinKit/HaishinKit.kt">HaishinKit.kt</a>、Flutter向けの<a href="https://github.com/HaishinKit/HaishinKit.dart">HaishinKit.dart</a>があります。</p></article><article><h3>どの配信方式に対応していますか？</h3><p>3つのSDKすべてでRTMP(S)、SRT、WHIP、WHEPに対応しています。RTMP(S)とSRTは配信と視聴に、WHIPは配信に、WHEPは視聴に使えます。</p></article><article><h3>商用アプリでも使えますか？</h3><p>BSD 3-Clauseライセンスの条件に従って商用利用できます。利用するリポジトリで、ライブラリ本体と依存ライブラリのライセンスをご確認ください。</p></article><article><h3>以前のバージョンのドキュメントはどこにありますか？</h3><p><a href="https://docs.haishinkit.com/#versions">ドキュメントのバージョン一覧</a>から参照できます。URLの<code>latest</code>を公開済みのバージョン番号に置き換えて開くこともできます。</p></article></div></section>
 <section id="related" class="section wrap" aria-labelledby="related-title">
-  <div class="section-heading"><div><p class="eyebrow">BUILT WITH HAISHINKIT</p><h2 id="related-title">Voice conversations.<br />Meet KaiwaKit.</h2></div><p>Native Swift and Kotlin libraries<br />for real-time AI voice apps.</p></div>
-  <p>KaiwaKit builds on HaishinKit to connect microphone capture and audio playback with OpenAI Realtime over WebRTC and Gemini Live over WebSocket. Its conversation API covers connection lifecycle, mute, transcripts and interruptions.</p>
-  <p>This experimental library includes Apple and Android example apps.</p>
-  <div class="actions"><a class="button primary" href="https://github.com/shogo4405/KaiwaKit">Explore KaiwaKit</a><a class="text-link" href="https://github.com/shogo4405/KaiwaKit#-api-documentation">API documentation</a></div>
+  <div class="section-heading"><div><p class="eyebrow">HaishinKitを使ったプロジェクト</p><h2 id="related-title">KaiwaKit</h2></div><p>リアルタイムAI音声対話向けのSwift・Kotlinライブラリ</p></div>
+  <p>HaishinKitのマイク入力と音声再生を使い、WebRTCでOpenAI Realtimeに、WebSocketでGemini Liveに接続します。会話APIでは接続管理、ミュート、文字起こし、割り込みを扱えます。</p>
+  <p>実験段階のライブラリで、Appleプラットフォーム向けとAndroid向けのサンプルを用意しています。</p>
+  <div class="actions"><a class="button primary" href="https://github.com/shogo4405/KaiwaKit">KaiwaKitを見る</a><a class="text-link" href="https://github.com/shogo4405/KaiwaKit#-api-documentation">APIドキュメント</a></div>
 </section>
 <section id="vqmetrix" class="section wrap" aria-labelledby="vqmetrix-title">
-  <div class="section-heading"><div><p class="eyebrow">BUILT WITH HAISHINKIT</p><h2 id="vqmetrix-title">Measure your video.<br />Meet VQMetrix.</h2></div><p>Video quality development tools<br />for macOS and Android workflows.</p></div>
-  <p>Compare reference and decoded video on macOS, explore H.264 and HEVC at different bitrates, and inspect VMAF scores and sender performance. Save measurement runs and export HTML reports to review your results.</p>
-  <p>With the HaishinKit Android example app, capture reference video from a camera or test pattern and encode bitrate variants. Transfer evaluation packages to the Mac over your local network, discover the receiver with Bonjour, and queue VMAF evaluations in History.</p>
+  <div class="section-heading"><div><p class="eyebrow">HaishinKitを使ったプロジェクト</p><h2 id="vqmetrix-title">VQMetrix</h2></div><p>macOSとAndroidで使える映像品質の評価ツール</p></div>
+  <p>macOSで基準映像とデコード後の映像を比較し、H.264やHEVCのビットレート別にVMAFスコアや送信側の性能を確認できます。計測結果を保存し、HTMLレポートとして出力できます。</p>
+  <p>HaishinKitのAndroidサンプルで、カメラ映像やテストパターンをビットレート別にエンコードできます。Bonjourで検出したMacに評価データを送信し、履歴画面からVMAF評価を実行できます。</p>
 <figure class="project-screenshot">
-  <a href="https://haishinkit.github.io/VQMetrix/" aria-label="Explore VQMetrix, shown here measuring video quality on macOS">
-    <img src="/images/vqmetrix-measurement.png" alt="VQMetrix on macOS comparing reference and H.264 encoded test-pattern video, with VMAF scores and a quality timeline." width="1240" height="884" loading="lazy" decoding="async" />
+  <a href="https://haishinkit.github.io/VQMetrix/" aria-label="VQMetrixのサイトを開く">
+    <img src="/images/vqmetrix-measurement.png" alt="macOS版VQMetrixで基準映像とH.264のテスト映像を比較し、VMAFスコアと品質の推移を表示した画面。" width="1240" height="884" loading="lazy" decoding="async" />
   </a>
-  <figcaption>VQMetrix 1.3.0 on macOS: reference and encoded video, VMAF scores and timeline. Shown here with four synthetic 640 × 360 frames encoded as H.264 Main at 2 Mbps; these scores describe this sample, not a general codec benchmark.</figcaption>
+  <figcaption>macOS版VQMetrix 1.3.0の計測例。640 × 360の合成映像4フレームをH.264 Main、2 Mbpsでエンコードし、基準映像と比較しています。</figcaption>
 </figure>
-  <div class="actions"><a class="button primary" href="https://haishinkit.github.io/VQMetrix/">Explore VQMetrix</a><a class="text-link" href="https://github.com/HaishinKit/VQMetrix">Source, downloads &amp; guides</a></div>
+  <div class="actions"><a class="button primary" href="https://haishinkit.github.io/VQMetrix/">VQMetrixを見る</a><a class="text-link" href="https://github.com/HaishinKit/VQMetrix">ソース・ダウンロード・ガイド</a></div>
 </section>
-    <section class="support wrap" aria-labelledby="support-title"><div><p class="eyebrow">BUILT IN THE OPEN</p><h2 id="support-title">Help keep it live.</h2><p>Explore the code, contribute an improvement, or support development through GitHub Sponsors.</p></div><div class="actions"><a class="button primary" href="https://github.com/sponsors/shogo4405">Sponsor the project <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/HaishinKit">Find us on GitHub <span aria-hidden="true">↗</span></a></div></section>
+    <section id="about" class="section wrap" aria-labelledby="about-title">
+      <div class="section-heading"><h2 id="about-title">HaishinKitについて</h2></div>
+      <p>日本語でライブ配信の配信を意味するHaishinとSDKを意味するKitが由来です。2015年にiPhone向けのプロジェクトとして始まりました。現在はAppleプラットフォームに加えて、AndroidとFlutter向けのライブラリも開発しています。また、ライブ配信のほか視聴にも対応しています。</p>
+    </section>
+    <section class="support wrap" aria-labelledby="support-title"><div><h2 id="support-title">開発に参加・支援する</h2><p>ソースコードはGitHubで公開しています。改善への参加や、GitHub Sponsorsを通じた開発支援ができます。</p></div><div class="actions"><a class="button primary" href="https://github.com/sponsors/shogo4405">開発を支援する <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/HaishinKit">GitHubで見る <span aria-hidden="true">↗</span></a></div></section>
   </main>
-  <footer class="wrap footer"><a class="brand" href="/">HaishinKit<span class="brand-dot">.</span></a><p>Open-source tools. Live possibilities.</p><nav aria-label="Footer"><a href="#related">Projects</a><a href="https://docs.haishinkit.com/">Documentation ↗</a><a href="https://github.com/HaishinKit">GitHub ↗</a></nav></footer>
+  <footer class="wrap footer"><a class="brand" href="/">HaishinKit<span class="brand-dot">.</span></a><p>ライブ配信のためのオープンソースライブラリ</p><nav aria-label="フッターナビゲーション"><a href="#related">関連プロジェクト</a><a href="https://docs.haishinkit.com/">ドキュメント ↗</a><a href="https://github.com/HaishinKit">GitHub ↗</a></nav></footer>
 </body>
 </html>
